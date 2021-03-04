@@ -31,19 +31,7 @@ print(lats[:10])
 from plotly.graph_objs import Scattergeo, Layout
 from plotly import offline
 
-data = [{
-    'type':'scattergeo', 
-    'lon':lons,
-    'lat':lats,
-    'marker':{
-        #going through each element in list and returning single (5 times) value
-        'size':[5*mag for mag in mags],
-        'color':mags,
-        'colorscale':'Viridis',
-        'reversescale':True,
-        'colorbar': {'title': 'Magnitude'}
-    }
-}]
+data = [Scattergeo(lon=lons, lat=lats)]
 
 my_layout = Layout(title='GLobal Earthquakes')
 
