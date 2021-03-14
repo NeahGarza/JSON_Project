@@ -5,6 +5,7 @@ fireData = json.load(infile)
 
 brights, lons, lats = [], [], []
 
+
 for dict in fireData:
     lats.append(dict["latitude"])
     lons.append(dict["longitude"])
